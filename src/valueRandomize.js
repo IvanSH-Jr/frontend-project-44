@@ -1,5 +1,3 @@
-import readlineSync from 'readline-sync';
-
 const randomizer = () => {
   const minValue = 1;
   const maxValue = 100;
