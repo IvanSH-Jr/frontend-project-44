@@ -1,25 +1,15 @@
-import { question } from 'readline-sync';
-
 import valueRandomizer from '../src/valueRandomizer.js';
+import startGame from '../src/index.js';
 
-const evenGame = (userName) => {
-  let rightAnswers = 0;
-  while (rightAnswers < 3) {
-    const questionValue = valueRandomizer(1, 100);
-    console.log(`Question: ${questionValue}`);
+const gameTask = 'Answer "yes" if the number is even, otherwise answer "no"'
 
-    const userAnswer = question('Your answer: ');
-    const correctAnswer = questionValue % 2 === 0 ? 'yes' : 'no';
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-      rightAnswers += 1;
-    } else {
-      rightAnswers = 0;
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-      break;
-    }
-  }
-  console.log(rightAnswers === 3 ? `Congratulations, ${userName}!` : `Let's try again, ${userName}!`);
+const evenCheck = () => {
+  const questionValue = valueRandomizer(1, 100);
+  const correctAnswer = questionValue % 2 === 0 ? 'yes' : 'no';
+
+  return [questionValue, correctAnswer];
 };
+
+const evenGame = () => startGame (evenCheck, gameTask);
 
 export default evenGame;

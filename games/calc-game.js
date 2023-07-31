@@ -1,46 +1,34 @@
-import { question } from 'readline-sync';
-
 import valueRandomizer from '../src/valueRandomizer.js';
-import randomMathOperator from '../src/mathOperator.js';
+import startGame from '../src/index.js';
 
-const calcGame = (userName) => {
-  console.log('What is the result of the expression?');
+const gameTask = 'What is the result of the expression?'
+const expression = () => {
+  const setOfMathOperators = ['-', '+', '*'];
+  const operatorIndex = Math.floor(Math.random() * setOfMathOperators.length);
+  const mathOperator = setOfMathOperators[operatorIndex];
 
-  let rightAnswers = 0;
+  const mathValue1 = valueRandomizer(1, 100);
+  const mathValue2 = valueRandomizer(1, 100);
   let mathResult = 0;
 
-  while (rightAnswers < 3) {
-    const mathOperator = randomMathOperator();
-    const mathValue1 = valueRandomizer(1, 100);
-    const mathValue2 = valueRandomizer(1, 100);
-
-    console.log(`Question: ${mathValue1} ${mathOperator} ${mathValue2}`);
-
-    switch (mathOperator) {
-      case '-':
-        mathResult = mathValue1 - mathValue2;
-        break;
-      case '+':
-        mathResult = mathValue1 + mathValue2;
-        break;
-      case '*':
-        mathResult = mathValue1 * mathValue2;
-        break;
-      default:
-        console.log('Operator exist!');
-    }
-
-    const userAnswer = question('Your answer: ');
-    if (+userAnswer === mathResult) {
-      console.log('Correct!');
-      rightAnswers += 1;
-    } else {
-      rightAnswers = 0;
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${mathResult}'`);
+  switch (mathOperator) {
+    case '-':
+      mathResult = mathValue1 - mathValue2;
       break;
+    case '+':
+      mathResult = mathValue1 + mathValue2;
+      break;
+    case '*':
+      mathResult = mathValue1 * mathValue2;
+      break;
+    default:
+      console.log('Operator exist!');
     }
-  }
-  console.log(rightAnswers === 3 ? `Congratulations, ${userName}!` : `Let's try again, ${userName}!`);
+  const question = `${mathValue1} ${mathOperator} ${mathValue2}`;
+  
+  return [question, mathResult];
 };
+
+const calcGame = () => startGame(expression, gameTask);
 
 export default calcGame;
