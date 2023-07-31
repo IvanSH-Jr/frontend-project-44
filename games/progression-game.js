@@ -1,7 +1,8 @@
 import valueRandomizer from '../src/valueRandomizer.js';
+import startGame from '../src/index.js';
 
-const progressionGame = () => {
-  console.log('What number is missing in the progression?');
+const gameTask = 'What number is missing in the progression?';
+const createProgression = () => {
   const progressionLength = valueRandomizer(5, 12);
   const progressionsFirstElement = valueRandomizer(1, 100);
   const progressionsStep = valueRandomizer(2, 7);
@@ -20,7 +21,9 @@ const progressionGame = () => {
   const rightAnswer = progression[positionOfHiddenElement];
   progression[positionOfHiddenElement] = '..';
 
-  return [rightAnswer, progression];
+  return [progression.join(' '), rightAnswer];
 };
+
+const progressionGame = () => startGame (createProgression, gameTask);
 
 export default progressionGame;
