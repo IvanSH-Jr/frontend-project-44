@@ -4,8 +4,8 @@ const euclidGcdSearch = (val1, val2) => {
 
   while (firstNumber !== 0 && secondNumber !== 0) {
     if (firstNumber > secondNumber) {
-        firstNumber = firstNumber % secondNumber;
-    } else secondNumber = secondNumber % firstNumber;
+      firstNumber %= secondNumber;
+    } else secondNumber %= firstNumber;
   }
 
   return firstNumber + secondNumber;
