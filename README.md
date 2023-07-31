@@ -17,3 +17,9 @@
 [![asciicast](https://asciinema.org/a/599571.svg)](https://asciinema.org/a/599571)
 ### Lose:
 [![asciicast](https://asciinema.org/a/599573.svg)](https://asciinema.org/a/599573)
+
+## Brain-gcd examples:
+### Win:
+[![asciicast](https://asciinema.org/a/599893.svg)](https://asciinema.org/a/599893)
+### Lose:
+[![asciicast](https://asciinema.org/a/599894.svg)](https://asciinema.org/a/599894)
