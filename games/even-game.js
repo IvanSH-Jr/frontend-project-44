@@ -5,7 +5,7 @@ import valueRandomizer from '../src/valueRandomizer.js';
 const evenGame = (userName) => {
   let rightAnswers = 0;
   while (rightAnswers < 3) {
-    const questionValue = valueRandomizer();
+    const questionValue = valueRandomizer(1, 100);
     console.log(`Question: ${questionValue}`);
 
     const userAnswer = question('Your answer: ');

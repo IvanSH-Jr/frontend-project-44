@@ -11,8 +11,8 @@ const calcGame = (userName) => {
 
   while (rightAnswers < 3) {
     const mathOperator = randomMathOperator();
-    const mathValue1 = valueRandomizer();
-    const mathValue2 = valueRandomizer();
+    const mathValue1 = valueRandomizer(1, 100);
+    const mathValue2 = valueRandomizer(1, 100);
 
     console.log(`Question: ${mathValue1} ${mathOperator} ${mathValue2}`);
 

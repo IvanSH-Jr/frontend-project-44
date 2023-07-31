@@ -1,7 +1,5 @@
-const valueRandomizer = () => {
-  const minValue = 1;
-  const maxValue = 100;
-  const randomValue = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+const valueRandomizer = (min, max) => {
+  const randomValue = Math.floor(Math.random() * (max - min + 1)) + min;
   return randomValue;
 };
 
