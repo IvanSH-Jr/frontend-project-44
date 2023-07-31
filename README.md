@@ -23,3 +23,9 @@
 [![asciicast](https://asciinema.org/a/599893.svg)](https://asciinema.org/a/599893)
 ### Lose:
 [![asciicast](https://asciinema.org/a/599894.svg)](https://asciinema.org/a/599894)
+
+## Brain-progression examples:
+### Win:
+[![asciicast](https://asciinema.org/a/599967.svg)](https://asciinema.org/a/599967)
+### Lose:
+[![asciicast](https://asciinema.org/a/599969.svg)](https://asciinema.org/a/599969)
