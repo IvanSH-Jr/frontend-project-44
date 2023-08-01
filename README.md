@@ -29,3 +29,9 @@
 [![asciicast](https://asciinema.org/a/599967.svg)](https://asciinema.org/a/599967)
 ### Lose:
 [![asciicast](https://asciinema.org/a/599969.svg)](https://asciinema.org/a/599969)
+
+## Brain-prime examples:
+### Win:
+[![asciicast](https://asciinema.org/a/600069.svg)](https://asciinema.org/a/600069)
+### Lose:
+[![asciicast](https://asciinema.org/a/600070.svg)](https://asciinema.org/a/600070)
