@@ -1,4 +1,4 @@
-import valueRandomizer from '../src/valueRandomizer.js';
+import valueRandomizer from '../my_modules/valueRandomizer.js';
 import startGame from '../src/index.js';
 
 const gameTask = 'What is the result of the expression?';

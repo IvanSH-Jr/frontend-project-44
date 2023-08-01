@@ -1,4 +1,4 @@
-import valueRandomizer from '../src/valueRandomizer.js';
+import valueRandomizer from '../my_modules/valueRandomizer.js';
 import startGame from '../src/index.js';
 
 const gameTask = 'Answer "yes" if the number is even, otherwise answer "no"';

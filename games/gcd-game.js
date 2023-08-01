@@ -1,5 +1,5 @@
-import valueRandomizer from '../src/valueRandomizer.js';
-import euclidGcdSearch from '../src/gcdSearch.js';
+import valueRandomizer from '../my_modules/valueRandomizer.js';
+import euclidGcdSearch from '../my_modules/gcdSearch.js';
 import startGame from '../src/index.js';
 
 const gameTask = 'Find the greatest common divisor of given numbers';
