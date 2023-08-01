@@ -9,12 +9,17 @@ const startGame = (game, gameTask) => {
 
   let rightAnswers = 0;
   while (rightAnswers < 3) {
-    const [gameQuestion, correctAnswer] = game();
+    let gameQuestion = '';
+    let correctAnswer = '';
+    [gameQuestion, correctAnswer] = game();
+
+    if (correctAnswer === true) correctAnswer = 'yes';
+    if (correctAnswer === false) correctAnswer = 'no';
+
     console.log(`Question: ${gameQuestion}`);
 
     const userAnswer = question('Your answer: ');
-
-    if(userAnswer === String(correctAnswer)) {
+    if (userAnswer === String(correctAnswer)) {
       rightAnswers += 1;
       console.log('Correct!');
     } else {

@@ -1,7 +1,7 @@
 import valueRandomizer from '../src/valueRandomizer.js';
 import startGame from '../src/index.js';
 
-const gameTask = 'What is the result of the expression?'
+const gameTask = 'What is the result of the expression?';
 const expression = () => {
   const setOfMathOperators = ['-', '+', '*'];
   const operatorIndex = Math.floor(Math.random() * setOfMathOperators.length);
@@ -23,9 +23,9 @@ const expression = () => {
       break;
     default:
       console.log('Operator exist!');
-    }
+  }
   const question = `${mathValue1} ${mathOperator} ${mathValue2}`;
-  
+
   return [question, mathResult];
 };
 

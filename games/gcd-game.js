@@ -9,7 +9,7 @@ const getGcd = () => {
   const gcdResult = euclidGcdSearch(mathValue1, mathValue2);
   const question = `${mathValue1} ${mathValue2}`;
 
-  return [question, gcdResult]
+  return [question, gcdResult];
 };
 
 const gcdGame = () => startGame(getGcd, gameTask);

@@ -24,6 +24,6 @@ const createProgression = () => {
   return [progression.join(' '), rightAnswer];
 };
 
-const progressionGame = () => startGame (createProgression, gameTask);
+const progressionGame = () => startGame(createProgression, gameTask);
 
 export default progressionGame;
