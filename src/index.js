@@ -5,6 +5,8 @@ const startGame = (game, gameTask) => {
   const userName = question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
+  if (userName.length === 0) return exitGame();
+
   console.log(gameTask);
 
   let rightAnswers = 0;
@@ -30,5 +32,7 @@ const startGame = (game, gameTask) => {
   }
   console.log(rightAnswers === 3 ? `Congratulations, ${userName}!` : `Let's try again, ${userName}!`);
 };
+
+const exitGame = () => console.log('Name is empty! Restart the game!');
 
 export default startGame;
