@@ -1,11 +1,12 @@
 import { question } from 'readline-sync';
 
+const exitGame = () => 'Name is empty! Restart the game!';
+
 const startGame = (game, gameTask) => {
   console.log('Welcome to the Brain Games!');
   const userName = question('May I have your name? ');
+  if (userName.length === 0) return console.log(exitGame());
   console.log(`Hello, ${userName}!`);
-
-  if (userName.length === 0) return exitGame();
 
   console.log(gameTask);
 
@@ -30,9 +31,7 @@ const startGame = (game, gameTask) => {
       break;
     }
   }
-  console.log(rightAnswers === 3 ? `Congratulations, ${userName}!` : `Let's try again, ${userName}!`);
+  return console.log(rightAnswers === 3 ? `Congratulations, ${userName}!` : `Let's try again, ${userName}!`);
 };
-
-const exitGame = () => console.log('Name is empty! Restart the game!');
 
 export default startGame;
