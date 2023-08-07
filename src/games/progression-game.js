@@ -18,7 +18,7 @@ const createProgression = () => {
     counter += 1;
   }
 
-  const rightAnswer = progression[positionOfHiddenElement];
+  const rightAnswer = String(progression[positionOfHiddenElement]);
   progression[positionOfHiddenElement] = '..';
   const question = progression.join(' ');
   return [question, rightAnswer];
