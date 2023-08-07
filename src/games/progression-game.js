@@ -20,8 +20,8 @@ const createProgression = () => {
 
   const rightAnswer = progression[positionOfHiddenElement];
   progression[positionOfHiddenElement] = '..';
-
-  return [progression.join(' '), rightAnswer];
+  const question = progression.join(' ')
+  return [question, rightAnswer];
 };
 
 const playProgressionGame = () => startGame(createProgression, gameTask);

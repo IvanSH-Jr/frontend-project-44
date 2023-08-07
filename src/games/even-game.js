@@ -4,10 +4,10 @@ import startGame from '../index.js';
 const gameTask = 'Answer "yes" if the number is even, otherwise answer "no"';
 
 const evenCheck = () => {
-  const questionValue = getRandomValue(1, 100);
-  const correctAnswer = questionValue % 2 === 0 ? 'yes' : 'no';
-
-  return [questionValue, correctAnswer];
+  const question = getRandomValue(1, 100);
+  let rightAnswer = question % 2 === 0 ? 'yes' : 'no';
+  rightAnswer = String(rightAnswer);
+  return [question, rightAnswer];
 };
 
 const playEvenGame = () => startGame(evenCheck, gameTask);

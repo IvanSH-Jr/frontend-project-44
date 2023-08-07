@@ -10,28 +10,24 @@ const startGame = (game, gameTask) => {
 
   console.log(gameTask);
 
-  let rightAnswers = 0;
-  while (rightAnswers < 3) {
+  let questionCounter = 0;
+  for (questionCounter; questionCounter < 3; questionCounter += 1) {
     let gameQuestion = '';
     let correctAnswer = '';
     [gameQuestion, correctAnswer] = game();
 
-    if (correctAnswer === true) correctAnswer = 'yes';
-    if (correctAnswer === false) correctAnswer = 'no';
-
     console.log(`Question: ${gameQuestion}`);
 
     const userAnswer = question('Your answer: ');
-    if (userAnswer === String(correctAnswer)) {
-      rightAnswers += 1;
+    if (userAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
-      rightAnswers = 0;
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
       break;
     }
   }
-  return console.log(rightAnswers === 3 ? `Congratulations, ${userName}!` : `Let's try again, ${userName}!`);
+  console.log(questionCounter);
+  return console.log(questionCounter === 3 ? `Congratulations, ${userName}!` : `Let's try again, ${userName}!`);
 };
 
 export default startGame;

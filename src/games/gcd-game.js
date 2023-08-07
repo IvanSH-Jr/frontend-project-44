@@ -6,10 +6,12 @@ const gameTask = 'Find the greatest common divisor of given numbers';
 const getGcd = () => {
   const mathValue1 = getRandomValue(1, 100);
   const mathValue2 = getRandomValue(1, 100);
-  const gcdResult = euclidGcdSearch(mathValue1, mathValue2);
+  let rightAnswer = euclidGcdSearch(mathValue1, mathValue2);
   const question = `${mathValue1} ${mathValue2}`;
 
-  return [question, gcdResult];
+  rightAnswer = String(rightAnswer);
+  
+  return [question, rightAnswer];
 };
 
 const playGcdGame = () => startGame(getGcd, gameTask);
