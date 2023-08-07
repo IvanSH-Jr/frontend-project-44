@@ -12,6 +12,21 @@
 * Определение наибольшего общего делителя. (brain-gcd)
 * Определение простого числа. (brain-prime)
 
+# Минимальные требования:
+Node.js версии 14.15 и выше. Терминал.
+
+# Как установить и запустить:
+<ol>
+<li>Склонировать репозиторий</li>
+<li>Зайти в репозиторий</li>
+<li>Открыть терминал и ввести:
+<code>make install</code></li>
+<li>Установка глобально:
+<code>npm link</code></li>
+<li>Выбрать игру. Например, чтобы сыграть в brain-calc, нужно ввести:
+<code>brain-calc</code>
+
+
 # Asciinema: 
 ### Install: 
 [![asciicast](https://asciinema.org/a/599161.svg)](https://asciinema.org/a/599161)

@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "brain-games",
+  "description": "The project includes a set of several games. Brain-even, Brain-calc, brain-progression, brain-gcd, brain-prime.",
   "main": "index.js",
   "type": "module",
   "scripts": {
