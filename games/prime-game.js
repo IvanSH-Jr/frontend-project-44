@@ -1,10 +1,10 @@
-import valueRandomizer from '../my_modules/valueRandomizer.js';
+import getRandomValue from '../my_modules/getRandomValue.js';
 import startGame from '../src/index.js';
 
 const gameTask = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
 const isPrime = () => {
-  const mathValue = valueRandomizer(1, 100);
+  const mathValue = getRandomValue(1, 100);
 
   for (let i = 2; i < mathValue; i += 1) {
     if (mathValue % i === 0) return [mathValue, false];
@@ -13,6 +13,6 @@ const isPrime = () => {
   return [mathValue, mathValue !== 1];
 };
 
-const primeGame = () => startGame(isPrime, gameTask);
+const playPrimeGame = () => startGame(isPrime, gameTask);
 
-export default primeGame;
+export default playPrimeGame;

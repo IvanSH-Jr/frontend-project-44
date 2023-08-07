@@ -1,14 +1,14 @@
-import valueRandomizer from '../my_modules/valueRandomizer.js';
+import getRandomValue from '../my_modules/getRandomValue.js';
 import startGame from '../src/index.js';
 
 const gameTask = 'What number is missing in the progression?';
 const createProgression = () => {
-  const progressionLength = valueRandomizer(5, 12);
-  const progressionsFirstElement = valueRandomizer(1, 100);
-  const progressionsStep = valueRandomizer(2, 7);
+  const progressionLength = getRandomValue(5, 12);
+  const progressionsFirstElement = getRandomValue(1, 100);
+  const progressionsStep = getRandomValue(2, 7);
   const progression = [];
 
-  const positionOfHiddenElement = valueRandomizer(0, progressionLength - 1);
+  const positionOfHiddenElement = getRandomValue(0, progressionLength - 1);
 
   let counter = 0;
   while (counter < progressionLength) {
@@ -24,6 +24,6 @@ const createProgression = () => {
   return [progression.join(' '), rightAnswer];
 };
 
-const progressionGame = () => startGame(createProgression, gameTask);
+const playProgressionGame = () => startGame(createProgression, gameTask);
 
-export default progressionGame;
+export default playProgressionGame;
