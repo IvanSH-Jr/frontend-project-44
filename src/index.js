@@ -26,7 +26,6 @@ const startGame = (game, gameTask) => {
       break;
     }
   }
-  console.log(questionCounter);
   return console.log(questionCounter === 3 ? `Congratulations, ${userName}!` : `Let's try again, ${userName}!`);
 };
 

@@ -20,7 +20,7 @@ const createProgression = () => {
 
   const rightAnswer = progression[positionOfHiddenElement];
   progression[positionOfHiddenElement] = '..';
-  const question = progression.join(' ')
+  const question = progression.join(' ');
   return [question, rightAnswer];
 };
 

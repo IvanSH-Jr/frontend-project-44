@@ -10,7 +10,7 @@ const getGcd = () => {
   const question = `${mathValue1} ${mathValue2}`;
 
   rightAnswer = String(rightAnswer);
-  
+
   return [question, rightAnswer];
 };
 
