@@ -1,6 +1,6 @@
-import getRandomValue from '../my_modules/getRandomValue.js';
-import euclidGcdSearch from '../my_modules/gcdSearch.js';
-import startGame from '../src/index.js';
+import getRandomValue from '../utilities/getRandomValue.js';
+import euclidGcdSearch from './gcdSearch.js';
+import startGame from '../index.js';
 
 const gameTask = 'Find the greatest common divisor of given numbers';
 const getGcd = () => {

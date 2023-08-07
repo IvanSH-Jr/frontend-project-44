@@ -1,5 +1,5 @@
-import getRandomValue from '../my_modules/getRandomValue.js';
-import startGame from '../src/index.js';
+import getRandomValue from '../utilities/getRandomValue.js';
+import startGame from '../index.js';
 
 const gameTask = 'Answer "yes" if the number is even, otherwise answer "no"';
 

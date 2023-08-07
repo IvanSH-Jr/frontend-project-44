@@ -1,5 +1,5 @@
-import getRandomValue from '../my_modules/getRandomValue.js';
-import startGame from '../src/index.js';
+import getRandomValue from '../utilities/getRandomValue.js';
+import startGame from '../index.js';
 
 const gameTask = 'What number is missing in the progression?';
 const createProgression = () => {
