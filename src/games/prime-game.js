@@ -12,10 +12,7 @@ const isPrime = (number) => {
 };
 
 const getPrimeGameRigthAnswer = () => {
-  const minValue = 0;
-  const mxValue = 100;
-
-  const question = getRandomValue(minValue, mxValue);
+  const question = getRandomValue(0, 100);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, rightAnswer];
 };

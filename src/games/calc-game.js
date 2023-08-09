@@ -4,11 +4,9 @@ import startGame from '../index.js';
 const gameTask = 'What is the result of the expression?';
 const expression = () => {
   const setOfMathOperators = ['-', '+', '*'];
-  const minIndex = 0;
-  const maxIndex = setOfMathOperators.length - 1;
-  const operatorIndex = getRandomValue(minIndex, maxIndex);
+  const operatorIndex = getRandomValue(0, setOfMathOperators.length - 1);
   const mathOperator = setOfMathOperators[operatorIndex];
-  console.log(operatorIndex);
+
   const mathValue1 = getRandomValue(1, 100);
   const mathValue2 = getRandomValue(1, 100);
   let rightAnswer = 0;
@@ -27,8 +25,8 @@ const expression = () => {
       throw new Error(`Unknown math operator: '${mathOperator}'!`);
   }
   const question = `${mathValue1} ${mathOperator} ${mathValue2}`;
-  rightAnswer = String(rightAnswer);
-  return [question, rightAnswer];
+
+  return [question, String(rightAnswer)];
 };
 
 const playCalcGame = () => startGame(expression, gameTask);
