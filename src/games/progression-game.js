@@ -23,7 +23,7 @@ const createProgression = () => {
 const getProgressionForGame = () => {
   const progression = createProgression();
   const positionOfHiddenElement = getRandomValue(0, progression.length - 1);
-  
+
   const rightAnswer = progression[positionOfHiddenElement];
   progression[positionOfHiddenElement] = '..';
   const question = progression.join(' ');
