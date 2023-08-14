@@ -17,11 +17,11 @@ const createProgression = (progressionLength, progressionsFirstElement, progress
 };
 
 const getProgressionForGame = () => {
-  const progressionLength = getRandomValue(5, 12);
-  const progressionsFirstElement = getRandomValue(1, 100);
-  const progressionsStep = getRandomValue(2, 7);
+  const length = getRandomValue(5, 12);
+  const firstElement = getRandomValue(1, 100);
+  const step = getRandomValue(2, 7);
 
-  const progression = createProgression(progressionLength, progressionsFirstElement, progressionsStep);
+  const progression = createProgression(length, firstElement, step);
   const positionOfHiddenElement = getRandomValue(0, progression.length - 1);
 
   const rightAnswer = progression[positionOfHiddenElement];

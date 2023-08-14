@@ -10,7 +10,6 @@ const startGame = (getGame, gameTask) => {
   const questionCounter = 3;
 
   for (let i = 0; i < questionCounter; i += 1) {
-
     const [gameQuestion, correctAnswer] = getGame();
 
     console.log(`Question: ${gameQuestion}`);
