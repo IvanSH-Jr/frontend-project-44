@@ -3,12 +3,8 @@ import startGame from '../index.js';
 
 const gameTask = 'What number is missing in the progression?';
 
-const createProgression = () => {
-  const progressionLength = getRandomValue(5, 12);
-  const progressionsFirstElement = getRandomValue(1, 100);
-  const progressionsStep = getRandomValue(2, 7);
+const createProgression = (progressionLength, progressionsFirstElement, progressionsStep) => {
   const progression = [];
-
   let counter = 0;
   while (counter < progressionLength) {
     if (progression.length === 0) progression.push(progressionsFirstElement);
@@ -21,7 +17,11 @@ const createProgression = () => {
 };
 
 const getProgressionForGame = () => {
-  const progression = createProgression();
+  const progressionLength = getRandomValue(5, 12);
+  const progressionsFirstElement = getRandomValue(1, 100);
+  const progressionsStep = getRandomValue(2, 7);
+
+  const progression = createProgression(progressionLength, progressionsFirstElement, progressionsStep);
   const positionOfHiddenElement = getRandomValue(0, progression.length - 1);
 
   const rightAnswer = progression[positionOfHiddenElement];

@@ -7,11 +7,11 @@ const startGame = (getGame, gameTask) => {
   console.log(`Hello, ${userName}!`);
 
   console.log(gameTask);
+  const questionCounter = 3;
 
-  for (let i = 0; i < 3; i += 1) {
-    let gameQuestion = '';
-    let correctAnswer = '';
-    [gameQuestion, correctAnswer] = getGame();
+  for (let i = 0; i < questionCounter; i += 1) {
+
+    const [gameQuestion, correctAnswer] = getGame();
 
     console.log(`Question: ${gameQuestion}`);
 
